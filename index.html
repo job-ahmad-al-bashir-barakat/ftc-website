@@ -7,14 +7,72 @@
     <meta name="author" content="Creative Tim">
     <title>FTC Website</title>
     <!-- Favicon -->
-    <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
     <link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
     <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Argon CSS -->
     <link type="text/css" href="assets/css/argon.css?v=1.1.0" rel="stylesheet">
+    <style>
+        #return-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.7);
+            width: 50px;
+            height: 50px;
+            display: block;
+            text-decoration: none;
+            -webkit-border-radius: 35px;
+            -moz-border-radius: 35px;
+            border-radius: 35px;
+            display: none;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        #return-to-top i {
+            color: #fff;
+            margin: 0;
+            position: relative;
+            left: 16px;
+            top: 13px;
+            font-size: 19px;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        #return-to-top:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        #return-to-top:hover i {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,7 +80,7 @@
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom" style="z-index: 999;">
         <div class="container">
             <a class="navbar-brand mr-lg-5" href="../index.html">
-                <img src="assets/img/brand/white.png" alt="brand">
+                <img src="assets/img/brand/ftc.png" alt="brand" style="filter: brightness(0) invert(1);">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,19 +103,19 @@
                 </div>
                 <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
                     <li class="nav-item">
-                        <a href="#" class="nav-link" data-toggle="dropdown" role="button">
+                        <a href="#about-section" class="jump-to nav-link" data-toggle="dropdown" role="button">
                             <i class="ni ni-ui-04 d-lg-none"></i>
                             <span class="nav-link-inner--text">About</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="#services-section" class="jump-to nav-link">
                             <i class="ni ni-collection d-lg-none"></i>
                             <span class="nav-link-inner--text">Services</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="#contact-section" class="jump-to nav-link">
                             <i class="ni ni-collection d-lg-none"></i>
                             <span class="nav-link-inner--text">Contact Us</span>
                         </a>
@@ -119,7 +177,7 @@
                                 <!--vendors in providing the right solution for all possible telecommunications needs.-->
                             </p>
                             <div class="btn-wrapper">
-                                <a href="#" class="btn btn-info btn-icon mb-3 mb-sm-0">
+                                <a href="#contact-section" class="jump-to btn btn-info btn-icon mb-3 mb-sm-0">
                                     <span class="btn-inner--icon"><i class="fa fa-envelope"></i></span>
                                     <span class="btn-inner--text">Get In Toutch</span>
                                 </a>
@@ -137,7 +195,7 @@
         </section>
         <!-- 1st Hero Variation -->
     </div>
-    <section class="section section-lg pt-lg-0 mt--200">
+    <section id="about-section" class="section section-lg pt-lg-0 mt--200">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
@@ -251,7 +309,7 @@
             </div>
         </div>
     </section>
-    <section class="section section-lg pt-lg-0">
+    <section id="services-section" class="section section-lg pt-lg-0">
         <div class="container pt-lg">
             <div class="row text-center justify-content-center">
                 <div class="col-lg-10">
@@ -560,19 +618,19 @@
     </section>
     <section class="section section-lg pt-lg-0 pt-150 section-contact-us">
         <div class="container">
-            <div class="row justify-content-center mt--300">
+            <div id="contact-section" class="row justify-content-center mt--300">
                 <div class="col-lg-8">
                     <div class="card bg-gradient-secondary shadow">
                         <div class="card-body p-lg-5">
                             <h4 class="mb-1">Get In Toutch with us?</h4>
                             <p class="mt-0">Your contact is very important for us.</p>
-                            <form action="#">
+                            <form id="contact" action="#" method="post">
                                 <div class="form-group mt-5">
                                     <div class="input-group input-group-alternative">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-user-run"></i></span>
                                         </div>
-                                        <input class="form-control" placeholder="Your name" type="text" required>
+                                        <input name="name" class="form-control" placeholder="Your name" type="text" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -580,11 +638,11 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                         </div>
-                                        <input class="form-control" placeholder="Email address" type="email" required>
+                                        <input name="email" class="form-control" placeholder="Email address" type="email" required>
                                     </div>
                                 </div>
                                 <div class="form-group mb-4">
-                                    <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..." required></textarea>
+                                    <textarea name="message" class="form-control form-control-alternative" rows="4" cols="80" placeholder="Type a message..." required></textarea>
                                 </div>
                                 <div>
                                     <button type="submit" class="btn btn-default btn-round btn-block btn-lg">Send Message</button>
@@ -607,37 +665,12 @@
             <div class="row row-grid justify-content-center">
                 <div class="col-lg-8 text-center">
                     <div class="row justify-content-center">
-                    <div class="col-lg-2 col-4">
-                        <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Bootstrap 4 - Most popular front-end component library">
-                            <img alt="image" src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg" class="img-fluid">
-                        </a>
+                        <div class="col-lg-8 col-12">
+                            <a href="javascript:void(0)" target="_blank" data-toggle="tooltip" data-original-title="Polucom">
+                                <img alt="image" src="assets/img/brand/clients.png" class="img-fluid" >
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-2 col-4">
-                        <a href=" https://www.creative-tim.com/product/vue-argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Vue.js - The progressive javascript framework">
-                            <img alt="image" src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href=" https://www.sketchapp.com/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Sketch - Digital design toolkit">
-                            <img alt="image" src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg" class="img-fluid opacity-3">
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href=" https://www.adobe.com/products/photoshop.html" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Adobe Photoshop - Software for digital images manipulation">
-                            <img alt="image" src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg" class="img-fluid opacity-3">
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href=" https://angularjs.org/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Angular - One framework. Mobile &amp; desktop">
-                            <img alt="image" src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg" class="img-fluid opacity-3">
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href=" https://angularjs.org/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] React - A JavaScript library for building user interfaces">
-                            <img alt="image" src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg" class="img-fluid opacity-3">
-                        </a>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -666,7 +699,7 @@
         <div class="row align-items-center justify-content-md-between">
             <div class="col-md-6">
                 <div class="copyright">
-                    &copy; 2019 <a href="https://www.iotec.me" target="_blank">IOTec Team</a>.
+                    &copy; 2019 <a href="/" target="_blank">FTC</a>.
                 </div>
             </div>
             <div class="col-md-6">
@@ -675,13 +708,58 @@
                         <a href="https://www.iotec.me" class="nav-link" target="_blank">IOTec Team</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">Contact Us</a>
+                        <a href="#contact-section" class="jump-to nav-link" target="_blank">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+<div class="modal fade" id="modal-notification-success" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+        <div class="modal-content bg-gradient-success">
+            <div class="modal-header">
+                <h6 class="modal-title" id="modal-title-notification-success">Attention</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="py-3 text-center">
+                    <i class="ni ni-bell-55 ni-3x"></i>
+                    <h4 class="heading mt-4">You should read this!</h4>
+                    <p>your email is sended :-)</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-notification-error" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+        <div class="modal-content bg-gradient-danger">
+            <div class="modal-header">
+                <h6 class="modal-title" id="modal-title-notification">Attention</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="py-3 text-center">
+                    <i class="ni ni-bell-55 ni-3x"></i>
+                    <h4 class="heading mt-4">You should read this!</h4>
+                    <p>Sorry Please try again. your email isn't sended :-(</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Core -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/popper/popper.min.js"></script>
@@ -689,6 +767,45 @@
 <script src="assets/vendor/headroom/headroom.min.js"></script>
 <!-- Argon JS -->
 <script src="assets/js/argon.js?v=1.1.0"></script>
+<script>
+    $(function () {
+        // ===== Form Contact ====
+        var contact = $('#contact');
+        contact.on('submit',function (e) {
+           e.preventDefault();
+           var $this = $(this);
+           $.post("contact.php", $this.serialize(), function() {
+               var notification = $('#modal-notification-success')
+               notification.modal('show');
+               contact.find('input,textarea').val('');
+           }).fail(function() {
+               var notification = $('#modal-notification-danger')
+               notification.modal('show');
+           });
+        });
+
+        // ===== Scroll to Top ====
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 500);
+        });
+        $('.jump-to').click(function (e) {
+            e.preventDefault();
+            $('body,html').animate({
+                scrollTop : $($(this).attr('href')).offset().top // Scroll to top of body
+            }, 500);
+        });
+    });
+
+</script>
 </body>
 
 </html>

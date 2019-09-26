@@ -1,0 +1,12 @@
+{
+    "name": "ahmad-al-bashir-barakat/ftc",
+    "authors": [
+        {
+            "name": "HP-Pavilion",
+            "email": "abasheerbarakat@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}
